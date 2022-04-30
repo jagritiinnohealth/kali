@@ -34,9 +34,9 @@ import static org.jsoup.helper.Validate.fail;
 public class PageActions {
     private WebDriver driver;
 
-    private static WebDriverWait shortWait;
-    private static WebDriverWait longWait;
-    private static WebDriverWait extraLongWait;
+    private WebDriverWait shortWait;
+    private WebDriverWait longWait;
+    private WebDriverWait extraLongWait;
 
     private static Config config = EnvFactory.getInstance().getConfig();
     private final static String PATH_RESULTS_DIR = config.getString("RESULTS_DIRECTORY");
