@@ -1,0 +1,5 @@
+# Add all secret files to git crypt
+/src/main/resources/secrets.* filter=git-crypt diff=git-crypt
+
+# prevent encrypting the .gitattributes file itself:
+.gitattributes !filter !diff
