@@ -78,6 +78,6 @@ Key tools used in this framework are:
 
 ## Working with git-crypt to encrypt secrets
 
-- [how-to-manage-your-secrets-with-git-crypt](https://dev.to/heroku/how-to-manage-your-secrets-with-git-crypt-56ih)
+[README.SECRETS.md](./README.SECRETS.md)
 
 ## References
