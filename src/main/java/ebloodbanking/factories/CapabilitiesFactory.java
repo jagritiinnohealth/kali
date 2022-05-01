@@ -1,7 +1,7 @@
 package ebloodbanking.factories;
 
 import ebloodbanking.choices.Browser;
-import ebloodbanking.config.EnvFactory;
+import ebloodbanking.config.TestEnvFactory;
 import com.typesafe.config.Config;
 import org.openqa.selenium.Capabilities;
 import org.openqa.selenium.PageLoadStrategy;
@@ -20,7 +20,7 @@ import java.util.logging.Level;
 import static java.lang.Boolean.parseBoolean;
 
 public class CapabilitiesFactory {
-    private static Config config = EnvFactory.getInstance().getConfig();
+    private static Config config = TestEnvFactory.getInstance().getConfig();
 
     private static final boolean HEADLESS = parseBoolean(config.getString("HEADLESS"));
     private static final boolean ACCEPT_INSECURE_CERTIFICATES = parseBoolean(config.getString("ACCEPT_INSECURE_CERTIFICATES"));

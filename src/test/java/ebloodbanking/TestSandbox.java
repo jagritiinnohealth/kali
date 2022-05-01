@@ -1,23 +1,20 @@
 package ebloodbanking;
 
 import com.typesafe.config.Config;
-import ebloodbanking.config.EnvFactory;
-import ebloodbanking.factories.DriverFactory;
+import ebloodbanking.config.TestEnvFactory;
+import ebloodbanking.testextensions.TestSetup;
 import lombok.extern.slf4j.Slf4j;
-import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
-import org.openqa.selenium.WebDriver;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 @Slf4j
-public class TestSandbox {
-    private static Config config = EnvFactory.getInstance().getConfig();
+public class TestSandbox extends TestSetup {
+    private static Config config = TestEnvFactory.getInstance().getConfig();
     private static final String HOME_PAGE_URL = config.getString("HOME_PAGE_URL");
-    private WebDriver driver = DriverFactory.getDriver();
 
     @BeforeEach
     void setup() {
@@ -30,12 +27,5 @@ public class TestSandbox {
     @Test
     void assertThatHomePageTitleIsCorrect() {
         assertEquals("eBloodBanking | Jagriti Blood Bank Management System", driver.getTitle());
-    }
-
-    @AfterEach
-    void teardown() {
-        driver.close();
-        driver.quit();
-        log.info("tear down complete");
     }
 }
