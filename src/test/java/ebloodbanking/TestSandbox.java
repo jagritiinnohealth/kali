@@ -13,8 +13,8 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 @Slf4j
 public class TestSandbox extends TestSetup {
-    private static Config config = TestEnvFactory.getInstance().getConfig();
-    private static final String HOME_PAGE_URL = config.getString("HOME_PAGE_URL");
+    private static final Config CONFIG = TestEnvFactory.getInstance().getConfig();
+    private static final String HOME_PAGE_URL = CONFIG.getString("HOME_PAGE_URL");
 
     @BeforeEach
     void setup() {

@@ -15,7 +15,7 @@ class TestLogin extends TestSetup {
     private LoginPage loginPage;
     private HomePage homePage;
 
-    private static Config config = TestEnvFactory.getInstance().getConfig();
+    private static final Config CONFIG = TestEnvFactory.getInstance().getConfig();
 
     @BeforeEach
     public void setup() {
@@ -32,7 +32,7 @@ class TestLogin extends TestSetup {
 
     @Test
     void assertThatUserCanLoginWithValidDetails() {
-        loginPage.login(config.getString("USERNAME"), config.getString("PASSWORD"));
+        loginPage.login(CONFIG.getString("USERNAME"), CONFIG.getString("PASSWORD"));
         assertEquals("Current Status | eBloodBanking", homePage.getTitle());
     }
 }

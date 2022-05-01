@@ -80,4 +80,9 @@ Key tools used in this framework are:
 
 [README.SECRETS.md](./README.SECRETS.md)
 
+## Github workflows
+
+- [how-to-unlock-secrets](https://github.com/sliteteam/github-action-git-crypt-unlock)
+- [how-to-cache-maven-dependencies-between-builds-in-github-action](https://github.com/skjolber/maven-cache-github-action)
+
 ## References

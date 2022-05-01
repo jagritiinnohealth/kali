@@ -12,13 +12,13 @@ public class TestHomePage extends TestSetup {
     private HomePage homePage;
     private LoginPage loginPage;
 
-    private static Config config = TestEnvFactory.getInstance().getConfig();
+    private static final Config CONFIG = TestEnvFactory.getInstance().getConfig();
 
     @BeforeEach
     public void setup() {
         loginPage = new LoginPage(driver)
                 .open()
-                .login(config.getString("USERNAME"), config.getString("PASSWORD"));
+                .login(CONFIG.getString("USERNAME"), CONFIG.getString("PASSWORD"));
         homePage = new HomePage(driver);
     }
 
