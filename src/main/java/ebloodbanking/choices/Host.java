@@ -4,9 +4,9 @@ import java.util.HashMap;
 import java.util.Map;
 
 public enum Host {
-    LOCALHOST("host.localhost"),
-    DOCKER_CONTAINER("host.docker.container"),
-    DOCKER_SELENIUM_GRID("host.docker.selenium.grid");
+    LOCALHOST("localhost"),
+    DOCKER_CONTAINER("docker.container"),
+    DOCKER_SELENIUM_GRID("docker.selenium.grid");
 
     public final String label;
 

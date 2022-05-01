@@ -1,4 +1,4 @@
-package ebloodbanking.config;
+package ebloodbanking.choices;
 
 import java.util.HashMap;
 import java.util.Map;
