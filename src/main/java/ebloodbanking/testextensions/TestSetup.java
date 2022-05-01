@@ -9,13 +9,16 @@ import org.openqa.selenium.WebDriver;
 @Slf4j
 public class TestSetup {
     /**
-     * Note: We are breaking the java encapsulation rule here by making the driver public here. So why do I do this?
-     * Because, (1) Each test gets its own copy of driver in BeforeEach method that gets destroyed in AfterEach method
-     * (2) Each test class that extends it, uses a unique copy of it in "each testcase", so we can use it without affecting
-     * other tests. If we don't make it public, our each test class would need this declaration to be done from within
-     * the test classes and would also need to then close it from the same test class.
+     * Note: We need a driver instance in test classes while initiating page classes example: loginPage = new LoginPage(driver)
+     * Now we got two choices:
+     * 1) Either create a private instance of driver in each test class and then we would need to also delete it from
+     * the same test class.
+     * 2) Or create a protected one here and extend/inherit it in all test classes.
+     * Since we are using BeforeEach to initialize/create a new driver instance for each test, we can afford to keep
+     * it here as protected and use it in each test class as an inherited variable. This is purely for convenience
+     * reasons and to avoid duplication that will otherwise arise by creating a test instance in each test class.
      */
-    public WebDriver driver;
+    protected WebDriver driver;
 
     @BeforeEach
     public void preProcessing() {
