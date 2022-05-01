@@ -35,7 +35,7 @@ jobs:
           step: restore
           
     - name: Build and Test with Maven
-      run: mvn clean -DHEADLESS=true -DexcludedGroups=flaky -DUSERNAME=${{ secrets.USERNAME }} -DPASSWORD=${{ secrets.PASSWORD }} test
+      run: mvn clean -DHEADLESS=true -DexcludedGroups=flaky test
 
     - name: Save Maven cache
       uses: skjolber/maven-cache-github-action@v1
