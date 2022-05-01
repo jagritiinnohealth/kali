@@ -2,7 +2,7 @@ package ebloodbanking.pages;
 
 import com.typesafe.config.Config;
 import ebloodbanking.actions.PageActions;
-import ebloodbanking.config.EnvFactory;
+import ebloodbanking.config.TestEnvFactory;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -12,7 +12,7 @@ import org.openqa.selenium.support.PageFactory;
 public class LoginPage {
     private PageActions pageActions;
 
-    private static Config config = EnvFactory.getInstance().getConfig();
+    private static Config config = TestEnvFactory.getInstance().getConfig();
     private static final String HOME_PAGE_URL = config.getString("HOME_PAGE_URL");
 
     public LoginPage(WebDriver driver) {
@@ -20,10 +20,10 @@ public class LoginPage {
         pageActions = new PageActions(driver);
     }
 
-    @FindBy(css = "input[data-form-type='username']")
+    @FindBy(css = "input[id='edit-name']")
     private WebElement usernameField;
 
-    @FindBy(css = "input[data-form-type='password']")
+    @FindBy(css = "input[id='edit-pass']")
     private WebElement passwordField;
 
     @FindBy(css = "button[value='Log in']")
@@ -45,5 +45,11 @@ public class LoginPage {
 
     public String getTitle() {
         return pageActions.getPageTitle();
+    }
+
+    public void login(String username, String password) {
+        pageActions.setTextField(usernameField, username);
+        pageActions.setTextField(passwordField, password);
+        pageActions.clickViaJavaScript(loginButton);
     }
 }

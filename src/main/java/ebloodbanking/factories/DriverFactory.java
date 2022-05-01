@@ -2,7 +2,7 @@ package ebloodbanking.factories;
 
 import ebloodbanking.choices.Browser;
 import ebloodbanking.choices.Host;
-import ebloodbanking.config.EnvFactory;
+import ebloodbanking.config.TestEnvFactory;
 import com.typesafe.config.Config;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import lombok.extern.slf4j.Slf4j;
@@ -15,7 +15,7 @@ import org.openqa.selenium.remote.RemoteWebDriver;
 
 @Slf4j
 public class DriverFactory {
-    private static Config config = EnvFactory.getInstance().getConfig();
+    private static Config config = TestEnvFactory.getInstance().getConfig();
     private static final Host HOST = Host.parse(config.getString("HOST"));
     private static final Browser BROWSER = Browser.parse(config.getString("BROWSER"));
 

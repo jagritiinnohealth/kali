@@ -4,7 +4,7 @@
 package ebloodbanking.actions;
 
 import com.typesafe.config.Config;
-import ebloodbanking.config.EnvFactory;
+import ebloodbanking.config.TestEnvFactory;
 import lombok.extern.slf4j.Slf4j;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
@@ -38,7 +38,7 @@ public class PageActions {
     private WebDriverWait longWait;
     private WebDriverWait extraLongWait;
 
-    private static Config config = EnvFactory.getInstance().getConfig();
+    private static Config config = TestEnvFactory.getInstance().getConfig();
     private final static String PATH_RESULTS_DIR = config.getString("RESULTS_DIRECTORY");
 
     public PageActions(WebDriver driver) {

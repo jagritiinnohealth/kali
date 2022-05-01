@@ -1,7 +1,7 @@
 package ebloodbanking.factories;
 
 import ebloodbanking.choices.Host;
-import ebloodbanking.config.EnvFactory;
+import ebloodbanking.config.TestEnvFactory;
 import com.typesafe.config.Config;
 import lombok.extern.slf4j.Slf4j;
 
@@ -10,7 +10,7 @@ import java.net.URL;
 
 @Slf4j
 public class URLFactory {
-    private static Config config = EnvFactory.getInstance().getConfig();
+    private static Config config = TestEnvFactory.getInstance().getConfig();
 
     private URLFactory() {
         throw new IllegalStateException("Static factory class");
