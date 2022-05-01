@@ -27,5 +27,5 @@ jobs:
         chmod +x ./install/install-chrome.sh
          ./install/install-chrome.sh
     - name: Build and Test with Maven
-      run: mvn clean -DHEADLESS=true -DexcludedGroups=flaky test
+      run: mvn clean -DHEADLESS=true -DexcludedGroups=flaky ${{ secrets.USERNAME }} ${{ secrets.PASSWORD }} test
 
