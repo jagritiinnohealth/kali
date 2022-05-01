@@ -2,6 +2,11 @@
 
 kali is our test framework to expose all UI regression bugs that we may encounter in our ebloodbanking application.
 
+[![GitHub Workflow Status](https://img.shields.io/github/workflow/status/jagritiinnohealth/kali/CI-to-test-the-tester)](https://github.com/jagritiinnohealth/kali/actions)
+![GitHub contributors](https://img.shields.io/github/contributors/jagritiinnohealth/kali)
+![GitHub last commit](https://img.shields.io/github/last-commit/jagritiinnohealth/kali)
+
+
 Inspiration of project name: [Kali-Slayer_of_Raktabīja](https://en.wikipedia.org/wiki/Kali#Slayer_of_Raktab%C4%ABja)
 
 ## Test goals and objectives
