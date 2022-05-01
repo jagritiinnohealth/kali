@@ -71,4 +71,8 @@ Key tools used in this framework are:
 - [ ] **Badges** (for a quick view on your project meta and build status)
   Key tools that we will use in other frameworks, that will all extend this core framework are:
 
+## Working with git-crypt to encrypt secrets
+
+- [how-to-manage-your-secrets-with-git-crypt](https://dev.to/heroku/how-to-manage-your-secrets-with-git-crypt-56ih)
+
 ## References
