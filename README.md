@@ -6,8 +6,25 @@ kali is our test framework to expose all UI regression bugs that we may encounte
 ![GitHub contributors](https://img.shields.io/github/contributors/jagritiinnohealth/kali)
 ![GitHub last commit](https://img.shields.io/github/last-commit/jagritiinnohealth/kali)
 
-
 Inspiration of project name: [Kali-Slayer_of_Raktabīja](https://en.wikipedia.org/wiki/Kali#Slayer_of_Raktab%C4%ABja)
+
+## Getting Started
+
+- Clone this project: `git clone https://github.com/jagritiinnohealth/kali.git`
+- Install below 3 external dependencies on your machine:
+  - **[Java 11](https://openjdk.java.net/projects/jdk/11/)** (as the core programming language)
+  - **[Maven 3.8.5](https://maven.apache.org/download.cgi)** (for dependency management)
+  - **[Google Chrome latest version](https://www.google.com/chrome/?brand=CHBD&gclid=Cj0KCQjwr-SSBhC9ARIsANhzu15P0PA-n9Zp4NpxKaOHVGtBD1TZQH0HlQQE6hUfsOFAU1nf-Rzdlf4aAoTJEALw_wcB&gclsrc=aw.ds)** (browser to run your tests)
+
+> If your JAVA_HOME is set to anything other than JDK 11, you would need to update the path. Else your project
+> will not run. Also, do remember to set the correct JDK settings in your IDE.
+
+- To test if the setup is correct.
+  - Open this project from IntelliJ.
+  - Then Do a dry run on test in : test -> java -> TestSandbox class and see if your setup is correct.
+- You may also need to set git-crypt to be able to decrypt secret keys on your local machine. Follow the instructions.
+  here and get back to me if these are not sufficient:
+  - [README.SECRETS.md](./README.SECRETS.md)
 
 ## Test goals and objectives
 
@@ -76,8 +93,9 @@ Key tools used in this framework are:
 - [ ] **Badges** (for a quick view on your project meta and build status)
   Key tools that we will use in other frameworks, that will all extend this core framework are:
 
-## Working with git-crypt to encrypt secrets
+## Github workflows
 
-- [how-to-manage-your-secrets-with-git-crypt](https://dev.to/heroku/how-to-manage-your-secrets-with-git-crypt-56ih)
+- [how-to-unlock-secrets](https://github.com/sliteteam/github-action-git-crypt-unlock)
+- [how-to-cache-maven-dependencies-between-builds-in-github-action](https://github.com/skjolber/maven-cache-github-action)
 
 ## References

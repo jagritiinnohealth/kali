@@ -47,9 +47,10 @@ public class LoginPage {
         return pageActions.getPageTitle();
     }
 
-    public void login(String username, String password) {
+    public LoginPage login(String username, String password) {
         pageActions.setTextField(usernameField, username);
         pageActions.setTextField(passwordField, password);
         pageActions.clickViaJavaScript(loginButton);
+        return this;
     }
 }
