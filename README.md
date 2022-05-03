@@ -19,12 +19,13 @@ Inspiration of project name: [Kali-Slayer_of_Raktabīja](https://en.wikipedia.or
 > If your JAVA_HOME is set to anything other than JDK 11, you would need to update the path. Else your project
 > will not run. Also, do remember to set the correct JDK settings in your IDE.
 
+- You would also need to set git-crypt to be able to decrypt secret keys on your local machine. Follow the instructions.
+  here and get back to the project owners if these are not sufficient:
+    - [README.SECRETS.md](./README.SECRETS.md)
 - To test if the setup is correct.
   - Open this project from IntelliJ.
   - Then Do a dry run on test in : test -> java -> TestSandbox class and see if your setup is correct.
-- You may also need to set git-crypt to be able to decrypt secret keys on your local machine. Follow the instructions.
-  here and get back to me if these are not sufficient:
-  - [README.SECRETS.md](./README.SECRETS.md)
+
 
 ## Test goals and objectives
 
