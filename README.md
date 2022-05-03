@@ -1,6 +1,6 @@
 # kali
 
-kali is our test framework to expose all UI regression bugs that we may encounter in our ebloodbanking application.
+kali is our test framework to expose all UI regression bugs that we may encounter in our [ebloodbanking application](https://ebloodbanking.com/).
 
 [![GitHub Workflow Status](https://img.shields.io/github/workflow/status/jagritiinnohealth/kali/CI-to-test-the-tester)](https://github.com/jagritiinnohealth/kali/actions)
 ![GitHub contributors](https://img.shields.io/github/contributors/jagritiinnohealth/kali)
