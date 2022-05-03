@@ -93,6 +93,9 @@ From terminal or from gitbash:
     - For Windows users, you have to run this command from git bash (running it from the powershell would not work).
 3. Secret files will now be automatically encrypted and decrypted when `committing` / `pulling` them.
 
+> A good check to see if this worked or not is to check the secrets.* file. For a new user earlier when this was a blob,
+> now you should be able to see plain text information. 
+
 ## Step10: Decrypt secrets in github actions CI, to be able to run tests in CI
 
 - [add-base64-GIT_CRYPT_KEY-to-github-secrets](https://github.com/sliteteam/github-action-git-crypt-unlock)
