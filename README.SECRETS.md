@@ -86,7 +86,11 @@ From terminal or from gitbash:
 2. Run `git-crypt add-gpg-user <USER_EMAIL_ADDRESS>` to add the new user to `git-crypt`.
 3. The changes will automatically be `committed`, but you must run `git push` to push them to remote.
 
-### Step (iii): New User to pull the latest changes from repo
+### Step (iii): Delete the `newkey.asc` that another user shared with you
+
+1. To avoid accidentally committing this key to your project or to get it exposed, delete this key. Its purpose is solved and it is no longer required now.
+
+### Step (iv): New User to pull the latest changes from repo
 
 1. Clone this repo. If you've already cloned it, be sure to `git pull` once the admin indicates they've successfully added your `gpg` key.
 2. Run `git-crypt unlock` to decrypt the secret files. You only need to perform this step once.
@@ -94,7 +98,7 @@ From terminal or from gitbash:
 3. Secret files will now be automatically encrypted and decrypted when `committing` / `pulling` them.
 
 > A good check to see if this worked or not is to check the secrets.* file. For a new user earlier when this was a blob,
-> now you should be able to see plain text information. 
+> now you should be able to see plain text information.
 
 ## Step10: Decrypt secrets in github actions CI, to be able to run tests in CI
 
